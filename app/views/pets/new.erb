@@ -9,7 +9,7 @@
   <input type="text" name="pets[name]" id="pet_name">
 
   <label>Choose an existing pet:</label><br></br>
-    <%@owners.each do |owner|%>
+    <%Owner.all.each do |owner|%>
       <input type="radio" name="pet[owner_id]" id="<%= owner.id %>" value="<%= owner.id %>"><%= owner.name %></input>
     <%end%><br /><br />
 
